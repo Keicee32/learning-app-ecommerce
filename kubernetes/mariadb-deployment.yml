@@ -36,3 +36,7 @@ spec:
                 secretKeyRef:
                   name: secrets
                   key: MARIADB_DATABASE
+      #initContainers:
+       # - name: init-container
+       #   image: mariadb
+       #   command:
