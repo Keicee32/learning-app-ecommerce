@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  ecomm:
+    image: testing
+    ports:
+      - 80:80
+    env_file:
+      - ./.env
+    networks:
+      - app
+
+  db:
+    image: mariadb
+    env_file:
+      - ./.env
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
