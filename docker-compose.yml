@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   ecomm:
-    image: testing
+    image: keicee32/learning-app-ecommerce:v1
     ports:
       - 80:80
     env_file:
