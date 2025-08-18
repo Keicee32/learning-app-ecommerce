@@ -15,6 +15,11 @@ spec:
       containers:
         - name: web-db
           image: mariadb
+          readinessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 15
+            periodSeconds: 10
           env:
             - name: MARIADB_USER
               valueFrom:

@@ -16,6 +16,11 @@ spec:
         - name: learning-app
           image: keicee32/learning-app-ecommerce:v1
           imagePullPolicy: Always
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 10
           ports:
             - containerPort: 80
           env:

@@ -136,6 +136,7 @@
                         
                         // Attempt to connect to the database
                         $link = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
+                        echo $link;
                         
 
                         if ($link) {
